@@ -1,10 +1,14 @@
+<?php 
+include("config.php") 
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jolie balade</title>
+    <title><?php echo $lang['title'] ?></title>
+    
     <!---------------------------------- bootstrap ---------------------------------->
     <link
       rel="stylesheet"
@@ -13,17 +17,8 @@
       crossorigin="anonymous"
     />
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="app.css" />
   </head>
@@ -47,25 +42,34 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="#"><?php echo $lang['lien1'] ?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Our story</a>
+              <a class="nav-link" href="#"><?php echo $lang['lien2'] ?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">The App</a>
+              <a class="nav-link" href="#"><?php echo $lang['lien3'] ?></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Newsletter</a>
+              <a class="nav-link" href="#"><?php echo $lang['lien4'] ?></a>
             </li>
           </ul>
           <div class="waitlist">
-            <a class="nav-link" href="#">Sign up to Waitlist</a>
+            <a class="nav-link" href="#"><?php echo $lang['btnnav'] ?></a>
           </div>
           <div>
-            <button class="lang">
-              <img class="drap" src="france.png" alt="langue" />
+          <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="lang">
+              <img class="drap" src="<?php echo $lang['drap'] ?>" alt="langue" />
             </button>
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="index.php?lang=fr">Français</a></li>
+    <li><a class="dropdown-item" href="index.php?lang=en">anglais</a></li>
+  </ul>
+</div>
           </div>
         </div>
       </div>
@@ -74,21 +78,19 @@
     <div class="first_block">
       <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
               <div class="div1">
-                <h2 class="mane_line">Make your feelings travel</h2>
+                <h2 class="mane_line"><?php echo $lang['titre1'] ?></h2>
                 <p class="para1">
-                  Echangez avec des célibataires du monde entier et préparez vous à vivre des moments 
-                  inoubliables. L’amour n’a aucune frontière alors lancez vous ! Créez votre profil selon vos centres d'intérêts, créez des liens avec 
-                  des étrangers et laissez nous organiser vos dates dans les plus beaux endroits du monde.
+                <?php echo $lang['texte1'] ?>
                 </p>
-                <button class="btn_waitlist">Sign up to waitlist</button>
+                <button class="btn_waitlist"><?php echo $lang['textbtn'] ?></button>
               </div>
             </div>
-            <div class="col-sm-6" style="display: flex;align-items: center;">
+            <div class="col-md-6 video">
               <div  id="blocmain">
                 <img style="width: 100%;" src="Assets/video.png" alt="jolie balade"/>
-                <p class="titremain">“ Faites de chaques histoire d’amour,une véritable aventure ”</p>
+                <p class="titremain"><?php echo $lang['textvideo'] ?></p>
               </div>
             </div>
         </div>
@@ -114,27 +116,12 @@
           />
           </div>
           <div class="col-md-6 text_block2">
-            <h2 class="line_heart">Our story</h2>
+            <h2 class="line_heart"><?php echo $lang['story'] ?></h2>
             <p class="para2">
-              Nous avons été conditionnées par les sites de rencontres à être attirés par des gens à proximité car cela représente la facilité, c'est plus simple et plus accessible, mais moi je n'ai jamais vraiment aimé cette idée, mes relations amoureuses ont toujours été chaotique parce que j’avais l’impression constante de ne pas être avec la bonne personne, jusqu’à ce que je 
-              me rende compte que je ne cherchais juste pas au bon endroit .
-              <br />
-              <br />
-              Lors du premier confinement, j’ai fréquenté beaucoup d’applications de rencontres. J'habitais dans une petite ville du sud de la France à l’époque, et comme beaucoup de gens au vu de la situation à ce moment-là, 
-              j'avais envie d'évasion, d'aventures et surtout de rencontrer du monde.
-              <br />
-              <br />
-              En passant du temps sur ces applications de rencontres à la recherche de profils compatibles, j’ai constaté que le centre d'intérêt “Voyage” revenait souvent sous les profils. J’ai donc décidé à partir de là, de compter sa récurrence, et sur 547 profils trouvés, ce centre d'intérêt est revenu 412 fois soit 3 profils sur 4 avaient ce centre d'intérêt. Je me suis donc dit : pourquoi l'amour serait forcément à une dizaine de kilomètres de chez moi ? Le monde est si vaste et il y a tellement de 
-              choses à découvrir ensemble. C'est pour cette raison que j’ai décidé de créer joliebalade » 
-              <br />
-              <br />
-              Notre nom rappelle un bout de chemin ensemble, une aventure à partager et une belle histoire à raconter.
-              <br />
-              <br />
-              Au-delà de la rencontre amoureuse, nous souhaitons partager nos valeurs et donner l’opportunité à tout le monde de pouvoir voyager et profiter de ce que ce monde a de plus beau à offrir. Notre but est de vous proposer une expérience inédite et de vous offrir un service d’accompagnement premium et unique pour vos rencontres amoureuses. 
+            <?php echo $lang['textstory'] ?> 
             </p>
             <div style="width: 78%;">
-              <h4 class="signature">Dylan <br/><span>Fondateur de joliebalade.</span></h4>
+              <h4 class="signature">Dylan <br/><span><?php echo $lang['signature'] ?>.</span></h4>
             </div>
           </div>
         </div>
@@ -149,7 +136,7 @@
           src="Assets/logo.png"
           alt="jolie balade"
         />
-        <h4 class="text_logo">Meet Foreign Singles All Over the World</h4>
+        <h4 class="text_logo"><?php echo $lang['titrecarte'] ?></h4>
       </div>
       <div class="background_carte">
         <img
@@ -163,10 +150,9 @@
 
     <div class="foor_block">
       <div class="center_line">
-        <h4 class="title_pink">Our Services</h4>
+        <h4 class="title_pink"><?php echo $lang['services'] ?></h4>
         <p class="para_pink">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          volutpat ullamcorper in egestas sagittis. Aliquam blandit nisi urna.
+        <?php echo $lang['textservice'] ?>
         </p>
       </div>
 
@@ -174,57 +160,57 @@
         <div class="row">
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block1" class="block" src="Assets/white_block/block1.png" alt="jolie balade" />
-            <h5>Champagne on Arrival</h5>
+            <h5><?php echo $lang['bloc1'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block2" class="block" src="Assets/white_block/block2.png" alt="jolie balade" />
-            <h5>Private Driver</h5>
+            <h5><?php echo $lang['bloc2'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block3" class="block" src="Assets/white_block/block3.png" alt="jolie balade" />
-            <h5>Flight Check-in</h5>
+            <h5><?php echo $lang['bloc3'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block4" class="block" src="Assets/white_block/block4.png" alt="jolie balade" />
-            <h5>Repatriation</h5>
+            <h5><?php echo $lang['bloc4'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block5" class="block" src="Assets/white_block/block5.png" alt="jolie balade" />
-            <h5>Tourist Guide Activities</h5>
+            <h5><?php echo $lang['bloc5'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block6" class="block" src="Assets/white_block/block6.png" alt="jolie balade" />
-            <h5>Additional Luggage</h5>
+            <h5><?php echo $lang['bloc6'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block7" class="block" src="Assets/white_block/block7.png" alt="jolie balade" />
-            <h5>Customer Service 24h</h5>
+            <h5><?php echo $lang['bloc7'] ?></h5>
           </div>
           <div class="col-xs-6 col-md-3 block_white">
             <img id="block8" class="block" src="Assets/white_block/block8.png" alt="jolie balade" />
-            <h5>Insurance</h5>
+            <h5><?php echo $lang['bloc8'] ?></h5>
           </div>
         </div>
       </div>
       <div class="container mt-5 par">
         <div class="row">
           <div class="partner_block">
-            <h4 class="title_partners">Partners</h4>
+            <h4 class="title_partners"><?php echo $lang['partners'] ?></h4>
             <div class="container-fluid mb-3">
               <div class="row">
-                  <div class="col-sm-4 col-md-offset-1 col-md-2">
+                  <div class="bloc col-6 col-6 col-md-offset-1 col-md-2">
                     <img id="partner1" class="partner" src="Assets/partners/partner1.png" alt="jolie balade" />
                   </div>
-                  <div class="col-sm-4 col-md-2">
+                  <div class="bloc col-6 col-6 col-md-2">
                     <img id="partner2" class="partner" src="Assets/partners/partner2.png" alt="jolie balade" />
                   </div>
-                  <div class="col-sm-4 col-md-2">
+                  <div class="bloc col-6 col-6 col-md-2">
                     <img id="partner3" class="partner" src="Assets/partners/partner3.png" alt="jolie balade" />
                   </div>
-                  <div class="col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-2">
+                  <div class="bloc col-6 col-6 col-md-2">
                     <img id="partner4" class="partner" src="Assets/partners/partner4.png" alt="jolie balade" />
                   </div>
-                  <div class="col-sm-5 col-md-2">
+                  <div class="bloc col-6 col-6 col-md-2">
                     <img id="partner5" class="partner" src="Assets/partners/partner5.png" alt="jolie balade" />
                   </div>
               </div>
@@ -239,37 +225,37 @@
 
     <div class="five_block">
       <div class="center_line">
-        <h4 class="title_five">Our App</h4>
-        <h5 class="para_five">Features</h5>
+        <h4 class="title_five"><?php echo $lang['titreapp'] ?></h4>
+        <h5 class="para_five"><?php echo $lang['Manetextapp'] ?></h5>
       </div>
 
 
       <div class="container-fluid block-heart">
     <div class="row">
-        <div class="col-sm-4 textphone">
+        <div class="col-md-4 textphone">
           <div class="row">
-            <div class="col-sm-12 mb-5 text-app">
+            <div class="col-sm-6 col-md-12 mbok text-app">
               <img id="heart-app1" class="heart-app" src="Assets/heart-app.png" alt="jolie balade" />
-            <p class="para-heart">Elit at imperdiet dui accumsan si amet. Egestas sed tempus urna et pharetra pharetra.</p>
+            <p class="para-heart"><?php echo $lang['text1app'] ?></p>
             </div>
-            <div class="col-sm-12 text-app">
+            <div class="col-sm-6 col-md-12 text-app">
               <img id="heart-app1" class="heart-app" src="Assets/heart-app.png" alt="jolie balade" />
-              <p class="para-heart">Tortor at risus viverra adipiscing at in tellus integer feugiat</p>
+              <p class="para-heart"><?php echo $lang['text2app'] ?></p>
             </div>
         </div>
         </div>
-        <div class="col-sm-4 middle">
+        <div class="col-md-4 middle">
           <img id="phone" class="phone" src="Assets/blockphone.png" alt="jolie balade" />
         </div>
-        <div class="col-sm-4 textphone">
+        <div class="col-md-4 textphone">
           <div class="row">
-            <div class="col-sm-12 mb-5 text-app">
+            <div class="col-sm-6 col-md-12 mbok text-app">
               <img id="heart-app1" class="heart-app" src="Assets/heart-app.png" alt="jolie balade" />
-              <p class="para-heart">Elit at imperdiet dui accumsan si amet. Egestas sed tempus urna et pharetra pharetra.</p>
+              <p class="para-heart"><?php echo $lang['text3app'] ?></p>
             </div>
-            <div class="col-sm-12 text-app">
+            <div class="col-sm-6 col-md-12 text-app">
               <img id="heart-app1" class="heart-app" src="Assets/heart-app.png" alt="jolie balade" />
-              <p class="para-heart">Tortor at risus viverra adipiscing at in tellus integer feugiat</p>
+              <p class="para-heart"><?php echo $lang['text4app'] ?></p>
             </div>
         </div>
         </div>
@@ -282,7 +268,7 @@
 
     <div class="six_block">
       <div class="center_line">
-        <h4 class="title_six">Testimonials</h4>
+        <h4 class="title_six"><?php echo $lang['titrecom'] ?></h4>
       </div>
 
 
@@ -291,22 +277,22 @@
             <div class="col-sm-4 block_text_six">
               <h6 class="title_bloc_six">Sophie Barker</h6>
               <hr color="#F47F6E">
-              <p class="para_bloc_six">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum has been the industry's.</p>
+              <p class="para_bloc_six"><?php echo $lang['com1'] ?></p>
             </div>
             <div class="col-sm-4 block_text_six">
               <h6 class="title_bloc_six">Ryder Chapman</h6>
               <hr color="#F47F6E">
-              <p class="para_bloc_six">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum has been the industry's.</p>
+              <p class="para_bloc_six"><?php echo $lang['com2'] ?></p>
             </div>
             <div class="col-sm-4 block_text_six">
               <h6 class="title_bloc_six">Frankie Marshall</h6>
               <hr color="#F47F6E">
-              <p class="para_bloc_six">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. Lorem Ipsum has been the industry's.</p>
+              <p class="para_bloc_six"><?php echo $lang['com3'] ?></p>
             </div>
         </div>
     </div>
     <div class="arrow-block">
-      <button class="btn_waitlist">Sign up to waitlist</button></div>
+      <button class="btn_waitlist"><?php echo $lang['textbtn'] ?></button></div>
 </div>
   
   
@@ -319,12 +305,12 @@
       <div class="container mt-5 par">
         <div class="row">
           <div class="news_block">
-            <h4 class="title_partners">Sign Up To Our Newsletter</h4>
+            <h4 class="title_partners"><?php echo $lang['titrenews'] ?></h4>
             <div class="container-fluid mb-3">
               <div class="row">
                 <form method="POST" class="form_new">
                   <input type="email" name="new" placeholder="Email" required class="email">
-                  <input name="newsletter" type="submit" VALUE="Submit" class="envoi" />
+                  <input name="newsletter" type="submit" VALUE="<?php echo $lang['btnnews'] ?>" class="envoi" />
                 </form>
               </div>
           </div>
@@ -336,7 +322,7 @@
         <div class="footer-big">
           <div class="container">
             <div class="row">
-                <div class="col-sm-4 rere">
+                <div class="col-md-4 rere">
                   <div class="block_reseau">
                     <img id="res1" class="reseau" src="Assets/reseau/avion_black2.png" alt="jolie balade" />
                     <img id="res2" class="reseau" src="Assets/reseau/tw_rose2.png" alt="jolie balade" />
@@ -345,10 +331,10 @@
                   </div>
                   <p>Copyright 2020 Joliebalade. All rights reserved.Privacy Policy</p>
                 </div>
-                <div class="col-sm-4 logo-foo">
+                <div class="col-md-4 logo-foo">
                   <img class="logo_footer" src="Assets/reseau/jolie_white.png" alt="jolie balade" />
                 </div>
-                <div class="col-sm-4 logo-foo2">
+                <div class="col-md-4 logo-foo2">
                   <img id="dow1" class="download" src="Assets/download/apple.png" alt="jolie balade" />
                   <img id="dow2" class="download" src="Assets/download/google.png" alt="jolie balade" />
                   <p class="Soon">Soon Avaible</p>
