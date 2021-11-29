@@ -26,7 +26,7 @@ include("config.php")
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand logo" href="#"
-          ><img src="couleur_noir.png" alt="logo"
+          ><img src="logo.png" alt="logo"
         /></a>
         <button
           class="navbar-toggler"
@@ -291,9 +291,6 @@ include("config.php")
             </div>
         </div>
     </div>
-    <div class="arrow-block">
-      <button class="btn_waitlist"><?php echo $lang['textbtn'] ?></button></div>
-</div>
   
   
 
@@ -301,7 +298,8 @@ include("config.php")
 
 
     <div class="seven_block">
-
+    <div class="arrow-block">
+      <button class="btn_waitlist"><?php echo $lang['textbtn'] ?></button></div>
       <div class="container mt-5 par">
         <div class="row">
           <div class="news_block">

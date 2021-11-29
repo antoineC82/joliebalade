@@ -35,7 +35,7 @@ img[alt="logo"]{
 }
 
 .waitlist{
-  margin-left: 134px;
+  margin-left: 130px;
 }
 
 
@@ -131,7 +131,7 @@ img[alt="logo"]{
 .mane_line{
   padding-bottom: 11px;
   width: 367px;
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 700;
 }
 
@@ -167,7 +167,7 @@ img[alt="logo"]{
 
 
 #imgcouple{
-  width: 100%;
+  width: 90%;
 }
 
 .blocimg{
@@ -233,7 +233,7 @@ font-family: sans-serif;
 }
 
 #img_carte{
-  width: 80%;
+  width: 65%;
 }
 
 .background_carte{
@@ -289,7 +289,7 @@ font-family: sans-serif;
 }
 
 .block{
-  width: 70%;
+  width: 50%;
   margin-bottom: 25px;
 }
 
@@ -444,7 +444,7 @@ hr{
 
 
 .seven_block{
-  margin-top: 280px;
+  margin-top: 140px;
   position: relative;
   background-image: url(Assets/city_back2.png);
   background-position: center;
@@ -618,6 +618,12 @@ font-weight: 500;
   .blocimg{
     margin-bottom: 50px;
   }
+  #img_carte{
+    width: 90%;
+  }
+  .block{
+    width: 85%;
+  } 
 }
 
 
@@ -654,8 +660,11 @@ font-weight: 500;
 
 @media (min-width:768px){
   .test .col-md-3{
-    flex: 0 0 23% !important;
-    max-width: 23%;
+    flex: 0 0 21% !important;
+    max-width: 21%;
+  }
+  .test .row{
+    justify-content: center;
   }
 }
 
@@ -694,7 +703,7 @@ font-weight: 500;
     margin-top: 140px
   }
   .phone{
-    width: 75%;
+    width: 70%;
   }
   .textphone:last-of-type{
     margin-top: 40px;
@@ -766,6 +775,13 @@ font-weight: 500;
   .thirst_block{
     margin-top: 275px;
   }
+  .block{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .block_white h5{
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 350px){
@@ -813,14 +829,14 @@ font-weight: 500;
 @media (max-width: 800px){
 
   .seven_block{
-    margin-top: 360px;
+    margin-top: 120px;
   }
 }
 
 @media (max-width: 576px){
 
   .seven_block{
-    margin-top: 120px;
+    margin-top: 295px;
   }
   input[class="email"]{
     width: 190%;
@@ -844,13 +860,13 @@ font-weight: 500;
     width: 127%;
   }
   .seven_block{
-    margin-top: 270px;
+    margin-top: 120px;
   }
 }
 
 
 @media (max-width: 410px){
   .seven_block{
-    margin-top: 350px;
+    margin-top: 95px;
   }
 }
